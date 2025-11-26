@@ -20,6 +20,26 @@ router.route("/")
     // NEW - form to create a new listing
     router.get("/new", isLoggedIn,listingController.newForm);
 
+    router.get("/search", async (req, res) => {
+    const { country } = req.query;
+
+    // If empty query, redirect back
+    if (!country || country.trim() === "") {
+        return res.redirect("/listings");
+    }
+
+    // Case-insensitive search
+    const allListings = await Listing.find({
+        $or: [
+        { country: { $regex: country, $options: "i" }},
+        { location: { $regex: country, $options: "i" }}
+        ]
+    });
+
+    res.render("listings/index.ejs", { allListings });
+});
+
+
 router.route("/:id")
 .get( wrapAsync(listingController.show)) //Show
 .put(isLoggedIn,isOwner,  upload.single('listing[image]'), wrapAsync(validateListing), wrapAsync(listingController.update)) //Update
