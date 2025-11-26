@@ -15,9 +15,8 @@ module.exports.newForm=(req, res) => {
     res.render("listings/newform.ejs");
     };
 
-    const geoQuery = `${req.body.listing.location}, ${req.body.listing.country}`;
-
     module.exports.create=async(req, res,next) => {
+        const geoQuery = `${req.body.listing.location}, ${req.body.listing.country}`;
         let response = await geocodingClient.forwardGeocode({
         query: geoQuery,
         limit: 1
