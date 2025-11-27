@@ -95,7 +95,7 @@ app.use("/",userRouter);
 
     // ----- Home Route -----
     app.get("/", (req, res) => {
-    res.render("listings/index.ejs");
+    res.render("/listings");
     });
 
 
