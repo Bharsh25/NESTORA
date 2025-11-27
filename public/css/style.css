@@ -12,7 +12,7 @@ body {
     height: 5rem;
 }
 .fa-battle-net{
-    color: #ff5733;
+    color:  #ff385c;
     font-size: 2rem;
 }
 .nav-link{
@@ -89,14 +89,14 @@ body {
 
 /* New Form */
 .add-btn{
-    background-color: #ff5733 !important;
+    background-color: #ff385c !important;
     border: none !important;
 }
 
 /* Edit Form */ 
 .edt-btn{
     color: aliceblue !important;
-    background-color: #ff5733 !important;
+    background-color: #ff385c !important;
     border: none !important;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .btn-edit,.btn-delete, .btn-back{
-    background-color: #ff5733 !important;
+    background-color: #ff385c !important;
     border: none !important;
 }
 
