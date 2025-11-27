@@ -38,17 +38,7 @@
         .tax-info{
             display: none;
         }
-        .tax-switch{
-            border: 1px solid black;
-            height: 3rem;
-            border-radius: 1rem;
-            padding: 0 1rem;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            white-space: nowrap;
-        }
+        
     </style>
     
     <div class="filters-container">
@@ -132,10 +122,6 @@
         </a>
     </div>
 
-    <div class="tax-switch">
-        <label for="switchCheckDefault">Display total after taxes</label>
-        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-    </div>
 
 </div>
 
@@ -167,17 +153,3 @@
     </div>
     </body>
     
-    <script>
-        const taxSwitch = document.getElementById("switchCheckDefault");
-
-        taxSwitch.addEventListener('click', (event) => {
-            let taxInfo = document.getElementsByClassName("tax-info");
-            for(info of taxInfo){
-                if(info.style.display != "inline"){
-                    info.style.display = "inline";
-                } else {
-                    info.style.display = "none";
-                }
-            }
-        });
-    </script>
