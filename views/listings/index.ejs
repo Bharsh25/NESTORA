@@ -2,6 +2,16 @@
     <body>
         
     <style>
+
+        .filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
         #filters{
             display: flex;
             flex-wrap: nowrap;
@@ -9,6 +19,7 @@
             padding: 1rem;
             gap: 1.2rem;
             align-items: center;
+
         }
         #filters a{
             text-decoration: none;
@@ -40,94 +51,94 @@
         }
     </style>
     
-    <div id="filters">
+    <div class="filters-container">
 
+    <div id="filters">
         <a href="/listings/category/Trending">
-        <div class="filter">
-            <i class="fa-solid fa-fire"></i>
-            <p>Trending</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-fire"></i>
+                <p>Trending</p>
+            </div>
         </a>
-        
+
         <a href="/listings/category/Rooms">
-        <div class="filter">
-            <i class="fa-solid fa-bed"></i>
-            <p>Rooms</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-bed"></i>
+                <p>Rooms</p>
+            </div>
         </a>
 
         <a href="/listings/category/Iconic Cities">
-        <div class="filter">
-            <i class="fa-solid fa-mountain-city"></i>
-            <p>Iconic Cities</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-mountain-city"></i>
+                <p>Iconic Cities</p>
+            </div>
         </a>
 
         <a href="/listings/category/Mountain">
-        <div class="filter">
-            <i class="fa-solid fa-mountain"></i>
-            <p>Mountain</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-mountain"></i>
+                <p>Mountain</p>
+            </div>
         </a>
 
         <a href="/listings/category/Castle">
-        <div class="filter">
-            <i class="fa-brands fa-fort-awesome"></i>
-            <p>Castle</p>
-        </div>
+            <div class="filter">
+                <i class="fa-brands fa-fort-awesome"></i>
+                <p>Castle</p>
+            </div>
         </a>
-        
+
         <a href="/listings/category/Swimming Pools">
-        <div class="filter">
-            <i class="fa-solid fa-person-swimming"></i>
-            <p>Swimming Pools</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-person-swimming"></i>
+                <p>Swimming Pools</p>
+            </div>
         </a>
 
         <a href="/listings/category/Campaign">
-        <div class="filter">
-            <i class="fa-solid fa-tent"></i>
-            <p>Campaign</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-tent"></i>
+                <p>Campaign</p>
+            </div>
         </a>
 
         <a href="/listings/category/Farms">
-        <div class="filter">
-            <i class="fa-solid fa-tractor"></i>
-            <p>Farms</p>
-        </div>
+            <div class="filter">
+                <i class="fa-solid fa-tractor"></i>
+                <p>Farms</p>
+            </div>
         </a>
-        
+
         <a href="/listings/category/Arctic">
-        <div class="filter">
-            <i class="fa-regular fa-snowflake"></i>
-            <p>Arctic</p>
-        </div>
+            <div class="filter">
+                <i class="fa-regular fa-snowflake"></i>
+                <p>Arctic</p>
+            </div>
         </a>
 
-        <a href="/listings/category/Domes"> 
-        <div class="filter">
-            <i class="fa-solid fa-igloo"></i>
-            <p>Domes</p>
-        </div>
-        </a>
-        
-        <a href="/listings/category/Boats"> 
-        <div class="filter">
-            <i class="fa-solid fa-sailboat"></i>
-            <p>Boats</p>
-        </div>
+        <a href="/listings/category/Domes">
+            <div class="filter">
+                <i class="fa-solid fa-igloo"></i>
+                <p>Domes</p>
+            </div>
         </a>
 
-        </div>
+        <a href="/listings/category/Boats">
+            <div class="filter">
+                <i class="fa-solid fa-sailboat"></i>
+                <p>Boats</p>
+            </div>
+        </a>
+    </div>
 
-        <div class="tax-switch">
-            <div class="form-check-reverse form-switch">
-    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-    <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+    <div class="tax-switch">
+        <label for="switchCheckDefault">Display total after taxes</label>
+        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+    </div>
+
 </div>
 
-    </div>
 
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
         <% allListings.forEach(listing => { %>
